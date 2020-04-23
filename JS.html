@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://nathsep9.neocities.org/Ejercicio_u/Ejercicio%2018.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JS</title>
+
+    <style type="text/css">
+      body {
+        background: #aaa;
+        font-family: 'Tahoma';
+      }
+      h1 {
+        text-align: initial;
+      }
+      .contenedor {
+        margin: initial;
+      }
+      .elementoStyle {
+        border-radius: 0px;
+      }
+      .elementoStyle::-webkit-progress-bar {
+        border-radius: 100px;
+        background: #fff;
+      }
+      .elementoStyle::-webkit-progress-value {
+        background: blue;
+        border-radius: 0px;
+      }
+    </style>
+    <script type="text/javascript">
+      var elemento = document.getElementById('elemento');
+      console.log(elemento);
+
+      function iniciar() {
+        elemento.value += 5;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Nivel</h1>
+    <ul>
+      <li>Da click para avanzar la barra</li>
+    </ul>
+    <div class="contenedor">
+      <div class="contenedor">
+        <progress
+          value="0"
+          max="100"
+          id="bar"
+          class="elementoStyle frida"
+		></progress>
+		<button id="init">Click</button>
+		<input
+          type="button"
+          value="iniciar"
+          id="Iniciar"
+        />
+      </div>
+    </div>
+    <script type="text/javascript">
+      var bar = document.getElementById('bar');
+	  var init = document
+      function iniciar() {
+        bar.value += 5;
+      }
+      bar.addEventListener('click', () => {
+        setInterval(iniciar, 250);
+      });
+    </script>
+  </body>
+</html>
